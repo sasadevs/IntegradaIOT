@@ -5,39 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Áreas do saber</title>
     
+    <!-- Incluindo a biblioteca GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stylegeral.css">
-<link rel="stylesheet" href="stylepagindividual.css">
+    <link rel="stylesheet" href="stylegeral.css">
+    <link rel="stylesheet" href="stylepagindividual.css">
+
+   
 </head>
 <body>
 
-    
-<div class="cabecalho" width="130" height="130">
+    <div class="cabecalho" width="130" height="130">
+        <ul class="navegacao">
+            <li class="nav"><a href="pagareas.html">Áreas do saber</a></li>
+            <li class="nav"><a href="pagiot.html">Página IOT</a></li>
+            <li class="nav"><a href="sobremim.html">Sobre mim</a></li>
+        </ul>
 
+        <ul id="logo">
+            <li> <a href="index.html">Integrada IOT - Sara Chaves</a></li>
+        </ul>
+    </div>
 
-	<ul class="navegacao">
-	<li class="nav"><a href="pagareas.html">Áreas do saber</a></li>
-	<li class="nav"><a href="pagiot.html">Página IOT</a></li>
-	<li class="nav"><a href="sobremim.html">Sobre mim</a></li>
-
-	</ul>
-
-	<ul id="logo">
-		
-		<li> <a href="index.html">Integrada IOT - Sara Chaves</a></li>
-	
-		</ul>
-
-</div>
-    
     <div class="conteudo">
-
-
         <h1 class="titlerobotic">Áreas do saber</h1>
-
         <p class="subtext">Qual área deseja acessar?</p>
 
         <a href="chs.html"><button class="btnpagareas">
@@ -55,11 +50,32 @@
         <a href="mat.html"><button class="btnpagareas">
             <p class="txtbtnareas">Matemática</p>
         </button></a>
-       
-        
-            
-        </div>
+    </div>
 
+    <!-- JavaScript -->
+    <script>
+        // Seleciona todos os botões com a classe .btnpagareas
+        const buttons = document.querySelectorAll('.btnpagareas');
+
+        /// animação 
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                gsap.to(button, {
+                    duration: 0.3,      // Duração da animação
+                    scale: 1.1,         // Aumenta o botão
+                    backgroundColor: "#144B69", // Cor ao passar o mouse
+                });
+            });
+
+            button.addEventListener('mouseleave', () => {
+                gsap.to(button, {
+                    duration: 0.3,       // Duração da animação
+                    scale: 1,            // Retorna ao tamanho original
+                    backgroundColor: "#166088", // Retorna à cor original
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

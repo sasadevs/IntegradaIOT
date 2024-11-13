@@ -6,6 +6,8 @@
 
 	<title>Integrada IOT</title>
 
+	<!-- GSAP (Biblioteca de animação JavaScript) -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,34 +17,25 @@
 	<link rel="stylesheet" href="stylegeral.css">
 	<link rel="stylesheet" href="stylepagindividual.css">
 
-</head>
+	
 
+</head>
 
 <body>
 
-
-
 	<div class="cabecalho">
-
 
 		<ul class="navegacao">
 			<li class="nav"><a href="pagareas.html">Áreas do saber</a></li>
 			<li class="nav"><a href="pagiot.html">Página IOT</a></li>
 			<li class="nav"><a href="sobremim.html">Sobre mim</a></li>
-
 		</ul>
 
 		<ul id="logo">
-
 			<li> <a href="index.html">Integrada IOT - Sara Chaves</a></li>
-
 		</ul>
 
 	</div>
-
-
-
-
 
 	<div class="conteudo">
 
@@ -61,28 +54,47 @@
 				Clique e veja alguns dos trabalhos:
 			</p>
 
-			<a href="pagareas.html"><button class="btnpaginicial">
-				<p class="txtbtn">Áreas do saber</p>
-			</button></a>
+			<a href="pagareas.html">
+				<button class="btnpaginicial">
+					<p class="txtbtn">Áreas do saber</p>
+				</button>
+			</a>
 
-			<a href="pagiot.html"><button class="btnpaginicial">
-				<p class="txtbtn">IOT</p>
-			</button></a>
+			<a href="pagiot.html">
+				<button class="btnpaginicial">
+					<p class="txtbtn">IOT</p>
+				</button>
+			</a>
 
 		</div>
 
-
-
 	</div>
 
+	<!-- JavaScript -->
+	<script>
+		// Seleciona todos os botões com a classe .btnpaginicial
+		const buttons = document.querySelectorAll('.btnpaginicial');
 
+		// animação 
+		buttons.forEach(button => {
+			button.addEventListener('mouseenter', () => {
+				gsap.to(button, {
+					duration: 0.3, // Duração da animação
+					scale: 1.1,     // Aumenta o botão
+					backgroundColor: "#144B69", // Cor ao passar o mouse
+				});
+			});
 
-
-
-
-	</div>
-
-
-
+			button.addEventListener('mouseleave', () => {
+				gsap.to(button, {
+					duration: 0.3,   // Duração da animação
+					scale: 1,        // Retorna ao tamanho original
+					backgroundColor: "#166088", // retorna cor
+				});
+			});
+		});
+	</script>
 
 </body>
+
+</html>

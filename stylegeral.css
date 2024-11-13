@@ -78,6 +78,16 @@ html, body {margin: 0;
 
 
             .btnpaginicial {
+                background: #166088;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			cursor: pointer;
+
                 display: flex;
                 width: 288px;
                 height: 87px;
@@ -88,12 +98,21 @@ html, body {margin: 0;
                 margin-left: 154px;
                 margin-top: 60px;
                 border-radius: 40px;
-                background: #166088;
                 border-color: #FFF;
                 display: inline-block;
             } /*botoes da pag inicial*/
 
             .btnpagareas {
+                background: #166088;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    cursor: pointer;
+
                 display: flex;
                 width: 305px;
                 height: 136px;
@@ -105,7 +124,6 @@ html, body {margin: 0;
                 margin-top: 60px;
                 margin-right: -50px;
                 border-radius: 40px;
-                background: #166088;
                 border-color: #FFF;
                 display: inline-block;
             } /*botoes da pag areas do saber*/
